@@ -1,0 +1,3 @@
+Adds glow stone ore and glow stone.
+
+This is cherry-picked from the blox mod.

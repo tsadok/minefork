@@ -1,0 +1,4 @@
+# If enabled, Stairs+ nodes will be displayed in the inventory when playing in creative mode.
+# Disabling this can speed up loading times for clients as fewer nodes need to be registered in the creative inventory.
+moreblocks.stairsplus_in_creative_inventory (Display Stairs+ nodes in creative inventory) bool true
+moreblocks.table_saw_crafting (allow players to craft the table saw) bool true
