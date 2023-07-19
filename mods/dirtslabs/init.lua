@@ -1,8 +1,6 @@
 --local modpath = minetest.get_modpath("dirtslabs")
 local woodsoilspath = minetest.get_modpath("woodsoils")
 
--- TODO: make grass &c spread onto the plain dirt slabs and from the non-plain ones
-
 stairs.register_slab("dirt", "default:dirt",
                      {crumbly = 3 },
                      {"default_dirt.png"},

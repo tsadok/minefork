@@ -26,6 +26,14 @@ minetest.register_node("woodsoils:dirt_with_leaves_1", {
 	}
 })
 
+minetest.register_craft({
+    output = 'woodsoils:dirt_with_leaves_1',
+    recipe = {
+        {'group:leaves'},
+        {'default:dirt'}
+    }
+})
+
 minetest.register_node("woodsoils:dirt_with_leaves_2", {
 	description = S("Forest Soil 2"),
 	tiles = {
@@ -47,6 +55,15 @@ minetest.register_node("woodsoils:dirt_with_leaves_2", {
 		dry = "farming:soil",
 		wet = "farming:soil_wet"
 	}
+})
+
+minetest.register_craft({
+    output = 'woodsoils:dirt_with_leaves_2',
+    recipe = {
+        {'group:leaves'},
+        {'group:leaves'},
+        {'default:dirt'}
+    }
 })
 
 minetest.register_node("woodsoils:grass_with_leaves_1", {
@@ -72,6 +89,14 @@ minetest.register_node("woodsoils:grass_with_leaves_1", {
 	}
 })
 
+minetest.register_craft({
+    output = 'woodsoils:grass_with_leaves_1',
+    recipe = {
+        {'group:leaves'},
+        {'default:dirt_with_grass'}
+    }
+})
+
 minetest.register_node("woodsoils:grass_with_leaves_2", {
 	description = S("Forest Soil 4"),
 	tiles = {
@@ -93,6 +118,15 @@ minetest.register_node("woodsoils:grass_with_leaves_2", {
 		dry = "farming:soil",
 		wet = "farming:soil_wet"
 	}
+})
+
+minetest.register_craft({
+    output = 'woodsoils:grass_with_leaves_2',
+    recipe = {
+        {'group:leaves'},
+        {'group:leaves'},
+        {'default:dirt_with_grass'}
+    }
 })
 
 -- For compatibility with older stuff
