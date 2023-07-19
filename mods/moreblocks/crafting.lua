@@ -168,17 +168,14 @@ minetest.register_craft({
 	}
 })
 
--- TODO: figure out why this causes the following error:
--- ModError: failed to load and run script from ...\dreambuilder_game\mods\moreblocks\init.lua:
--- Invalid crafting recipe (output="moreblocks:sweeper 9")
--- minetest.register_craft({
---  	output = "moreblocks:sweeper 9",
---  	recipe = {
---  		{"default:grass", "default:grass", "default:grass"},
---  		{"default:stick"},
--- 		{"default:stick"},
---  	}
---  })
+minetest.register_craft({
+    output = "moreblocks:sweeper 9",
+    recipe = {
+        {"default:grass", "default:grass", "default:grass"},
+        {"", "default:stick", ""},
+        {"", "default:stick", ""},
+    }
+})
 
 minetest.register_craft({
 	output = "moreblocks:stone_tile 9",
