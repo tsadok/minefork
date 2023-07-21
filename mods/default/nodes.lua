@@ -2845,8 +2845,14 @@ minetest.register_node("default:brick", {
 	paramtype2 = "facedir",
 	place_param2 = 0,
 	tiles = {
-		"default_brick.png^[transformFX",
-		"default_brick.png",
+        -- These should all tile interchangeably, so you can build a brick wall and then whack
+        -- each voxel a random number of times with a screwdriver and get halfway decent results.
+		"default_brick_side4.png^[transformFX", -- top
+		"default_brick_side1.png", --bottom
+        "default_brick_side2.png",
+        "default_brick_side3.png",
+        "default_brick_side5.png",
+        "default_brick_side6.png",
 	},
 	is_ground_content = false,
 	groups = {cracky = 3},
