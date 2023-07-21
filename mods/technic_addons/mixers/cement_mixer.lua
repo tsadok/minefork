@@ -140,16 +140,15 @@ local data = {
     on_construct = function(pos)
         local node = minetest.get_node(pos)
         local meta = minetest.get_meta(pos)
-        local form_buttons = "" -- TODO: fs_helpers seems to be undefined here.  Need to find out where technic gets it.
-        -- local form_buttons = fs_helpers.cycling_button(
-        --     meta,
-        --     pipeworks.button_base,
-        --     "splitstacks",
-        --     {
-        --         pipeworks.button_off,
-        --         pipeworks.button_on
-        --     }
-        --     )..pipeworks.button_label
+        local form_buttons = pipeworks.fs_helpers.cycling_button(
+            meta,
+            pipeworks.button_base,
+            "splitstacks",
+            {
+                pipeworks.button_off,
+                pipeworks.button_on
+            }
+            )..pipeworks.button_label
         meta:set_string("infotext", machine_desc:format(tier))
         meta:set_int("tube_time",  0)
         meta:set_string("formspec", formspec..form_buttons)
@@ -169,10 +168,10 @@ local data = {
     on_receive_fields = function(pos, formname, fields, sender)
         if fields.quit then return end
         if not pipeworks.may_configure(pos, sender) then return end
-        fs_helpers.on_receive_fields(pos, fields)
+        pipeworks.fs_helpers.on_receive_fields(pos, fields)
         local node = minetest.get_node(pos)
         local meta = minetest.get_meta(pos)
-        local form_buttons = fs_helpers.cycling_button(
+        local form_buttons = pipeworks.fs_helpers.cycling_button(
             meta,
             pipeworks.button_base,
             "splitstacks",
@@ -211,12 +210,12 @@ local activedata = {
     on_receive_fields = function(pos, formname, fields, sender)
     if fields.quit then return end
         if not pipeworks.may_configure(pos, sender) then return end
-        fs_helpers.on_receive_fields(pos, fields)
+        pipeworks.fs_helpers.on_receive_fields(pos, fields)
         local node = minetest.get_node(pos)
         local meta = minetest.get_meta(pos)
         local form_buttons = ""
         if not string.find(node.name, ":lv_") then
-            form_buttons = fs_helpers.cycling_button(
+            form_buttons = pipeworks.fs_helpers.cycling_button(
                 meta,
                 pipeworks.button_base,
                 "splitstacks",
